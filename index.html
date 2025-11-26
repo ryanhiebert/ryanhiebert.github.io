@@ -14,10 +14,9 @@
       }
       div#container {
         text-align: center;
-        background-color: #f3f3ff;
+        background-color: white;
         padding: 2em;
         padding-bottom: 0;
-        border-radius: .3em;
         box-shadow: 2px 2px 6px gray;
         margin-top: 1em;
       }
@@ -25,7 +24,8 @@
         box-sizing: border-box;
         width: 200px;
         height: 200px;
-        border-radius: 1em;
+        border-radius: 3em;
+        corner-shape: squircle;
         padding: 0;
         margin: 0;
       }
@@ -58,7 +58,14 @@
   </head>
   <body>
     <div id="container">
-      <img id="avatar" src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=200">
+      <img
+        id="avatar"
+        src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
+        srcset="
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=200 1x,
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400 2x
+        "
+      >
       <h1>Ryan Hiebert</h1>
       <h2>ryan@ryanhiebert.com</h2>
       <h3>@ryanhiebert</h3>
