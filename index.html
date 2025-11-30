@@ -1,79 +1,68 @@
 <!doctype html>
-<html>
+<html lang="en" class="bg-sky-800 dark:bg-slate-950">
   <head>
     <title>Ryan Hiebert</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-        background-color: #f0f0e9;
-        color: rgba(0, 0, 0, .8);
-        font-family: monospace;
-      }
-      div#container {
-        text-align: center;
-        background-color: white;
-        padding: 2em;
-        padding-bottom: 0;
-        box-shadow: 2px 2px 6px gray;
-        margin-top: 1em;
-      }
-      img#avatar {
-        box-sizing: border-box;
-        width: 200px;
-        height: 200px;
-        border-radius: 3em;
-        corner-shape: squircle;
-        padding: 0;
-        margin: 0;
-      }
-      ul#profiles {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        margin-bottom: 1em;
-        display: flex;
-        justify-content: space-between;
-      }
-      ul#profiles > li > a {
-        text-decoration: none;
-        color: inherit;
-      }
-      ul#profiles > li > a > i {
-        font-size: 3em;
-      }
-      h1 {
-        margin-bottom: 0;
-      }
-      h2 {
-        margin-top: 0;
-      }
-      h3 {
-        margin: 0;
-      }
-    </style>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <div id="container">
-      <img
-        id="avatar"
-        src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
-        srcset="
-          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=200 1x,
-          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400 2x
-        "
-      >
-      <h1>Ryan Hiebert</h1>
-      <h2>ryan@ryanhiebert.com</h2>
-      <h3>@ryanhiebert</h3>
-      <ul id="profiles">
-        <li><a href="https://github.com/ryanhiebert/"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://twitter.com/ryanhiebert/"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="https://medium.com/@RyanHiebert/"><i class="fa fa-medium"></i></a></li>
+  <body
+    class="bg-white dark:bg-slate-900 text-sky-900 dark:text-slate-300 p-4 pl-8 w-6/7 min-h-dvh flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start font-serif"
+  >
+    <img
+      id="avatar"
+      class="rounded-[20%] brightness-120 dark:brightness-80 pb-4 lg:pb-0 lg:pr-4"
+      style="corner-shape: squircle"
+      src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
+      srcset="
+        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=200 1x,
+        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400 2x
+      "
+    />
+    <main class="flex flex-col justify-center">
+      <h1 class="text-6xl pb-4">I’m Ryan Hiebert</h1>
+      <h2 class="text-2xl pb-4">
+        I write full stack web software and empower development teams.
+      </h2>
+      <ul class="flex flex-row text-3xl lg:text-4xl [&>li]:hover:text-sky-600">
+        <li>
+          <a href="https://github.com/ryanhiebert/">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://fosstodon.org/@ryanhiebert">
+            <i class="fa-brands fa-mastodon"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/ryanhiebert/">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://medium.com/@RyanHiebert/">
+            <i class="fa-brands fa-medium"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/ryanhiebert/">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:ryan@ryanhiebert.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>
       </ul>
-    <div>
+    </main>
   </body>
 </html>
