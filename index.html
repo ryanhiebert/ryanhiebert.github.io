@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en" class="bg-sky-800 dark:bg-slate-950">
+<html
+  lang="en"
+  class="bg-sky-800 dark:bg-slate-950 font-serif [&>body]:bg-white [&>body]:dark:bg-slate-900 [&>body]:text-sky-900 [&>body]:dark:text-slate-300 [&>body]:w-6/7 [&>body]:min-h-dvh"
+>
   <head>
     <title>Ryan Hiebert</title>
     <meta charset="UTF-8" />
@@ -14,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body
-    class="bg-white dark:bg-slate-900 text-sky-900 dark:text-slate-300 p-4 pl-8 w-6/7 min-h-dvh flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start font-serif"
+    class="p-4 pl-8 lg:pl-16 flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start"
   >
     <img
       id="avatar"
@@ -22,47 +25,56 @@
       style="corner-shape: squircle"
       src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
       srcset="
-        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=200 1x,
-        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400 2x
+        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=150 1x,
+        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=300 2x
       "
     />
-    <main class="flex flex-col justify-center">
-      <h1 class="text-6xl pb-4">I’m Ryan Hiebert</h1>
-      <h2 class="text-2xl pb-4">
+    <main class="flex flex-col justify-center flex-grow">
+      <h1 class="text-4xl pb-4">I’m Ryan Hiebert</h1>
+      <h2 class="text-lg pb-4">
         I write full stack web software and empower development teams.
       </h2>
-      <ul class="flex flex-row text-3xl lg:text-4xl [&>li]:hover:text-sky-600">
+      <ul
+        class="flex flex-row text-2xl lg:text-3xl [&>li]:hover:text-sky-600 dark:[&>li]:hover:text-slate-600 [&>li]:transition-all [&>li]:duration-150 [&>li]:hover:scale-110"
+      >
         <li>
           <a href="https://github.com/ryanhiebert/">
-            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://fosstodon.org/@ryanhiebert">
-            <i class="fa-brands fa-mastodon"></i>
+            <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://x.com/ryanhiebert/">
-            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://medium.com/@RyanHiebert/">
-            <i class="fa-brands fa-medium"></i>
+            <i class="fa-brands fa-medium" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/ryanhiebert/">
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
           </a>
         </li>
         <li>
           <a href="mailto:ryan@ryanhiebert.com">
-            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
     </main>
+    <nav
+      class="text-5xl [&>ul>li]:hover:text-sky-600 dark:[&>ul>li]:hover:text-slate-600 [&>ul>li]:transition-all [&>ul>li]:duration-150 [&>ul>li]:hover:scale-105"
+    >
+      <ul>
+        <!--<li><a href="links.html">Links</a></li>-->
+      </ul>
+    </nav>
   </body>
 </html>
