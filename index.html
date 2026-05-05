@@ -17,64 +17,67 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body
-    class="p-4 pl-8 lg:pl-16 flex flex-col lg:flex-row items-start lg:items-center justify-center lg:justify-start"
+    class="p-4 pl-8 lg:pl-16 flex flex-col items-start justify-center min-w-72"
   >
-    <img
-      id="avatar"
-      class="rounded-[20%] brightness-120 dark:brightness-80 pb-4 lg:pb-0 lg:mr-4"
-      style="corner-shape: squircle"
-      src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
-      srcset="
-        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=150 1x,
-        https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=300 2x
-      "
-    />
-    <main class="flex flex-col justify-center flex-grow">
-      <h1 class="text-4xl pb-4">I’m Ryan Hiebert</h1>
-      <h2 class="text-lg pb-4">
-        I write full stack web software and empower development teams.
-      </h2>
-      <ul
-        class="flex flex-row text-2xl lg:text-3xl [&>li]:hover:text-sky-600 dark:[&>li]:hover:text-slate-600 [&>li]:transition-all [&>li]:duration-150 [&>li]:hover:scale-110"
+    <div class="flex flex-col lg:flex-row items-start lg:items-center">
+      <img
+        id="avatar"
+        class="rounded-[20%] brightness-120 dark:brightness-80 mb-4 lg:mb-0 lg:mr-4"
+        style="corner-shape: squircle"
+        src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
+        srcset="
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=150 1x,
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=300 2x
+        "
+      />
+      <main class="flex flex-col justify-center">
+        <h1 class="text-4xl pb-4">I'm Ryan Hiebert</h1>
+        <h2 class="text-lg pb-4">
+          I write full stack web software and empower development teams.
+        </h2>
+        <ul
+          class="flex flex-row text-2xl lg:text-3xl [&>li]:hover:text-sky-600 dark:[&>li]:hover:text-slate-600 [&>li]:transition-all [&>li]:duration-150 [&>li]:hover:scale-110"
+        >
+          <li>
+            <a href="https://github.com/ryanhiebert/">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://fosstodon.org/@ryanhiebert">
+              <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/ryanhiebert/">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@RyanHiebert/">
+              <i class="fa-brands fa-medium" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ryanhiebert/">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ryan@ryanhiebert.com">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
+    <div class="pt-6 text-sm">
+      <p class="uppercase tracking-widest text-xs opacity-50 pb-1">Writing</p>
+      <a
+        href="/oauth-for-ai-harnesses/"
+        class="hover:text-sky-600 dark:hover:text-slate-400 transition-colors duration-150"
+        >What AI harnesses should learn from OAuth</a
       >
-        <li>
-          <a href="https://github.com/ryanhiebert/">
-            <i class="fa-brands fa-github" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://fosstodon.org/@ryanhiebert">
-            <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://x.com/ryanhiebert/">
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://medium.com/@RyanHiebert/">
-            <i class="fa-brands fa-medium" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/ryanhiebert/">
-            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="mailto:ryan@ryanhiebert.com">
-            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </main>
-    <nav
-      class="text-5xl [&>ul>li]:hover:text-sky-600 dark:[&>ul>li]:hover:text-slate-600 [&>ul>li]:transition-all [&>ul>li]:duration-150 [&>ul>li]:hover:scale-105"
-    >
-      <ul>
-        <!--<li><a href="/links">Links</a></li>-->
-      </ul>
-    </nav>
+    </div>
   </body>
 </html>
