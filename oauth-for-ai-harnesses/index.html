@@ -1,0 +1,139 @@
+<!doctype html>
+<html
+  lang="en"
+  class="bg-sky-800 dark:bg-slate-950 font-serif [&>body]:bg-white [&>body]:dark:bg-slate-900 [&>body]:text-sky-900 [&>body]:dark:text-slate-300 [&>body]:w-6/7 [&>body]:min-h-dvh"
+>
+  <head>
+    <title>What AI harnesses should learn from OAuth - Ryan Hiebert</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="py-4 px-8">
+    <header class="flex items-center text-2xl pb-12">
+      <img
+        id="avatar"
+        class="rounded-[20%] brightness-120 dark:brightness-80 mr-4"
+        style="corner-shape: squircle"
+        src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
+        srcset="
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=50  1x,
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=100 2x
+        "
+      />
+      <a href="/" class="text-3xl pr-8">Ryan Hiebert</a>
+    </header>
+    <main class="max-w-180">
+      <h1 class="text-4xl pb-4">What AI harnesses should learn from OAuth</h1>
+
+      <article class="prose dark:prose-invert max-w-none">
+        <section>
+          <h2>Introduction</h2>
+          <!-- WHY NOW / WHAT'S MISSING
+            - AI agents are acting on our behalf with increasing autonomy
+            - They can send emails, call APIs, take actions with real consequences
+            - But there's almost no formal model for *whose authority* they're acting under
+            - No standard vocabulary; every harness reinvents (or ignores) this
+            - OAuth solved this exact problem for apps 15 years ago — what can we borrow?
+          -->
+        </section>
+
+        <section>
+          <h2>How OAuth works</h2>
+          <!-- THE MECHANICS
+            - Before OAuth: to let app A access your data on service B, you gave app A your password for B — full access, no limits, no takebacks
+            - OAuth's solution: instead of credentials, issue a token that represents a limited, delegated slice of authority
+            - The Resource Owner (you) tells the Authorization Server what the Client (the app) is allowed to do
+            - The Authorization Server issues a token encoding that permission — the client presents it to the Resource Server to act
+            - Scopes are the named units of permission: "read email", "send email", "read contacts" — the client asks for what it needs, the owner approves
+            - The client never sees your password; the token is the only credential it holds
+            - Four roles: Resource Owner, Client, Authorization Server, Resource Server
+          -->
+        </section>
+
+        <section>
+          <h2>What OAuth got right</h2>
+          <!-- CORE OAUTH INSIGHT
+            - Delegated authority without sharing credentials
+            - Explicit, named scopes — both parties know what's in play
+            - Short-lived, revocable grants
+            - Clear separation of roles: who owns the resource, who wants access, who mediates
+            - These properties are what make OAuth auditable and trustworthy
+          -->
+        </section>
+
+        <section>
+          <h2>Adapting it for AI harnesses</h2>
+          <!-- KEY DIFFERENCES / ADAPTATIONS
+            - In OAuth, the client authenticates itself; here the harness handles identity for everyone
+            - "Authentication implied by harness" — a deliberate simplification, not an omission
+            - Agents may themselves be Grantors, not just Grantees — delegation can be chained
+            - The Grantee knowing its own capabilities (vs. just declaring what it wants) is an inversion worth naming
+          -->
+        </section>
+
+        <section>
+          <h2>The four concepts</h2>
+
+          <h3>Grantor</h3>
+          <!-- WHO DELEGATES
+            - Holds authority and grants a subset of it
+            - Doesn't need to manage its own authentication — the harness vouches for it
+            - Future: can receive delegation requests and choose to approve/deny
+          -->
+
+          <h3>Grantee</h3>
+          <!-- WHO RECEIVES
+            - The agent acting under delegated authority
+            - Knows what it is capable of — not just what it's asking for
+            - Can receive delegation from multiple sources / at multiple levels
+            - Future: can initiate a request for delegation it doesn't yet have
+          -->
+
+          <h3>Broker</h3>
+          <!-- WHO MEDIATES
+            - Confirms both parties are who the harness says they are
+            - Communicates what has been granted
+            - Tracks the grant-to-agent mapping — the auditability record
+            - Future: relays delegation requests between Grantee and Grantor
+          -->
+
+          <h3>Action</h3>
+          <!-- WHERE AUTHORITY IS EXERCISED
+            - The actual moment an agent does something with real-world consequences
+            - Uses the brokered delegation as the authority to act
+            - Future: actions can introspect what permissions they require
+            - Future: agents can introspect what permissions they currently hold
+          -->
+        </section>
+
+        <section>
+          <h2>What's still ahead</h2>
+          <!-- THE FUTURE? ITEMS
+            - Request flows: Grantees asking, Grantors responding — the full OAuth dance
+            - Runtime introspection: actions knowing what permissions they need, agents knowing what they have
+            - These aren't blockers for starting — they're the next layer once the foundations exist
+            - Call to harness builders: get the vocabulary right first
+          -->
+        </section>
+
+        <section>
+          <h2>Conclusion</h2>
+          <!-- CLOSING
+            - These four concepts are table-stakes, not advanced features
+            - OAuth didn't invent new ideas — it named and standardized existing ones
+            - Same opportunity exists here: name the roles, build the trust model
+            - The alternative is every harness continuing to reinvent or ignore this
+          -->
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
