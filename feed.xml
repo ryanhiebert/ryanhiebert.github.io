@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ryan Hiebert</title>
+  <link href="https://ryanhiebert.com/" />
+  <link rel="self" href="https://ryanhiebert.com/feed.xml" />
+  <id>https://ryanhiebert.com/</id>
+  <updated>2026-05-10T23:10:29-05:00</updated>
+  <author>
+    <name>Ryan Hiebert</name>
+    <email>ryan@ryanhiebert.com</email>
+    <uri>https://ryanhiebert.com/</uri>
+  </author>
+
+  <entry>
+    <title>What AI should learn from OAuth</title>
+    <link href="https://ryanhiebert.com/what-ai-should-learn-from-oauth/" />
+    <id>https://ryanhiebert.com/what-ai-should-learn-from-oauth/</id>
+    <published>2026-05-10T23:10:29-05:00</published>
+    <updated>2026-05-10T23:10:29-05:00</updated>
+    <summary>AI agent harnesses should learn from OAuth's model of constrained delegation rather than relying on broad credential sharing.</summary>
+  </entry>
+</feed>
