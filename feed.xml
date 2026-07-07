@@ -4,12 +4,21 @@
   <link href="https://ryanhiebert.com/" />
   <link rel="self" href="https://ryanhiebert.com/feed.xml" />
   <id>https://ryanhiebert.com/</id>
-  <updated>2026-05-10T23:10:29-05:00</updated>
+  <updated>2026-07-06T21:04:34-05:00</updated>
   <author>
     <name>Ryan Hiebert</name>
     <email>ryan@ryanhiebert.com</email>
     <uri>https://ryanhiebert.com/</uri>
   </author>
+
+  <entry>
+    <title>What debit and credit mean</title>
+    <link href="https://ryanhiebert.com/what-debit-and-credit-mean/" />
+    <id>https://ryanhiebert.com/what-debit-and-credit-mean/</id>
+    <published>2026-07-06T21:04:34-05:00</published>
+    <updated>2026-07-06T21:04:34-05:00</updated>
+    <summary>Debits and credits are easier to understand when you think about the other party in the accounting relationship.</summary>
+  </entry>
 
   <entry>
     <title>What AI should learn from OAuth</title>
