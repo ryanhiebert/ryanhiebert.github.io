@@ -1,0 +1,120 @@
+<!doctype html>
+<html
+  lang="en"
+  class="bg-sky-800 dark:bg-slate-950 font-serif [&>body]:bg-white [&>body]:dark:bg-slate-900 [&>body]:text-sky-900 [&>body]:dark:text-slate-300 [&>body]:w-6/7 [&>body]:min-h-dvh"
+>
+  <head>
+    <title>We need more and fewer HTTP methods - Ryan Hiebert</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The standard HTTP methods are sometimes awkward, and well-known methods may be the wrong abstraction for many resources."
+    />
+    <link
+      rel="canonical"
+      href="https://ryanhiebert.com/we-need-more-and-fewer-http-methods/"
+    />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Ryan Hiebert"
+      href="https://ryanhiebert.com/feed.xml"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="pt-4 px-8 pb-24">
+    <header class="flex items-center text-2xl pb-12">
+      <img
+        id="avatar"
+        class="rounded-[20%] brightness-120 dark:brightness-80 mr-4"
+        style="corner-shape: squircle"
+        src="https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=400"
+        srcset="
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=50  1x,
+          https://www.gravatar.com/avatar/3d6f9ce43420307d127a3eaa5f09b500?s=100 2x
+        "
+      />
+      <a href="/" class="text-3xl pr-8">Ryan Hiebert</a>
+    </header>
+    <main class="max-w-[80ch]">
+      <h1 class="text-4xl pb-8">We need more and fewer HTTP methods</h1>
+
+      <p
+        class="mb-8 border-l-4 border-amber-400 pl-4 text-base italic text-sky-700 dark:text-slate-400"
+      >
+        Note: This draft needs technical refinement. It overstates the case
+        severely.
+      </p>
+
+      <article class="text-base sm:text-lg lg:text-xl">
+        <p class="my-4 leading-7">
+          The standard HTTP methods are sometimes fine, but sometimes they're
+          just really awkward, or invoke an idea of what they should be that is
+          just totally wrong.
+        </p>
+
+        <p class="my-4 leading-7">
+          PUT does not mean "replace the entire resource", even though it kind
+          of feels like it. The semantics are that it is idempotent, and that it
+          sends a payload. Partial updates are completely able to be done with
+          PUT, because partial updates are idempotent.
+        </p>
+
+        <p class="my-4 leading-7">
+          PATCH similarly doesn't mean "partial update". That's
+          <em class="italic">allowed</em>, but PATCH's semantics are that it is
+          NOT idempotent. PATCH allows for a lot more creativity. You can make a
+          custom format that says "increase field xyz by 5". But the method name
+          invokes the idea of a git patch, which feels more similar to a "change
+          line X to this new value" type of operation than an instruction list.
+          It almost <em class="italic">feels</em> like a partial update kind of
+          name.
+        </p>
+
+        <p class="my-4 leading-7">
+          We could lament the names. PUT might be better understood if the name
+          was SET instead. It could invoke the idea of setting a key, so it
+          might be more obvious that a partial update would work.
+        </p>
+
+        <p class="my-4 leading-7">
+          Or PATCH might be better called MODIFY, where the obvious question
+          would be <em class="italic">how</em> and the idea of modifying it with
+          commands would again be more obvious. But I think maybe all of that is
+          the wrong question.
+        </p>
+
+        <h2 class="text-2xl lg:text-3xl font-bold mt-10 mb-4">
+          The villain is well-known methods
+        </h2>
+
+        <p class="my-4 leading-7">
+          The big problem is that well-known methods are, in many cases, kind of
+          a bad idea. We should use a lot more flexibility to use custom method
+          names that have their own semantics.
+        </p>
+
+        <p class="my-4 leading-7">
+          We know what a resource is. It's similar to an object in programming.
+          And we don't limit object method names to a standardized set of names
+          with pre-defined semantics. We'd never even think of doing that, it's
+          so obviously silly.
+        </p>
+
+        <p class="my-4 leading-7">
+          So why are we doing that with HTTP? It's at least partly because HTML
+          overloaded the method names to encode its form handling, and we
+          haven't broken free from that idea.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
